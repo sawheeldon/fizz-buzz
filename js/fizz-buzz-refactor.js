@@ -23,31 +23,39 @@ function validateInput(inputNumber) {
     }
 
     if (userInputCorrectFlag = true) {
-        playFizzBuzz
+        playFizzBuzz(inputNumber);
     }
 }
 
-function playFizzBuzz(input) {
-    for (var counter = 1; counter <= limit; counter++) {
+function playFizzBuzz(inputNumber) {
+    for (var counter = 1; counter <= inputNumber; counter++) {
         $('#showResults').append(checkFizzBuzz(counter));
     }
 
 }
 
-function checkFizzBuzz() {
+function checkFizzBuzz(currentNumber) {
+    var msg = "<li>" + currentNumber + "</li>";
 
+    if (currentNumber % 3 == 0) {
+        msg = "<li>Fizz</li>";
+    }
+
+    if (currentNumber % 5 == 0) {
+        msg = "<li>Buzz</li>";
+    }
+
+    if ((currentNumber % 3 == 0) && (currentNumber % 5 == 0)) {
+        msg = "<li>Fizz-Buzz</li>";
+    }
+    return msg;
 }
 
-function input() {
-    //alert("This works");
-    prompt("Please set the highest number for the game");
-}
 
 $(document).ready(function () {
 
     $('#click-me').click(function () {
-        input();
-
+        var input = prompt("Please set the highest number for the game");
         validateInput(input);
     });
 });
