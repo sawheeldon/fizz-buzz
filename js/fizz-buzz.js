@@ -1,4 +1,4 @@
-/* for (var counter =1; counter <=100; counter++){
+for (var counter =1; counter <=100; counter++){
     if ((counter % 3 == 0) && (counter % 5==0)){
         console.log("Fizz-Buzz");
     }
@@ -11,7 +11,7 @@
     else{
         console.log(counter);
     }
-} */
+}
 
 
 /*for (var counter =1; counter <=100; counter++){
@@ -27,7 +27,7 @@
     (var counter)
 } */
 
-for (var counter = 1; counter <= 100; counter++) {
+/*for (var counter = 1; counter <= 100; counter++) {
     //set the default value first
     var msg = counter;
     //over-write the default values as we go through the logic
@@ -41,4 +41,4 @@ for (var counter = 1; counter <= 100; counter++) {
         msg = "FizzBuzz";
     }
     console.log(msg);
-}
+}*/
